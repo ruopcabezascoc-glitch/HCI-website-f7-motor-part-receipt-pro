@@ -1,0 +1,382 @@
+/* RESET */
+html { scroll-behavior: smooth; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #0d0d0d;
+    color: white;
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1 {
+    color: gold;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+}
+
+/* NAV HOVER LINE */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    text-align: center;
+    background: 
+                url('logo.jpg') center/cover;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.hero-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+/* IMAGE SIDE */
+.image {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    background: url('PIC1.jpg') center/cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* SEARCH */
+.search {
+    text-align: center;
+    margin: 30px;
+}
+
+.search input {
+    padding: 12px;
+    width: 90%;
+    max-width: 280px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 20px gold;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    color: gray;
+}
+
+.price {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    border: 1px solid gold;
+    color: gold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: gold;
+    color: black;
+}
+
+/* CONTACT FORM */
+.contact-container {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: gold;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background: white;
+}
+
+/* PROMO SECTION */
+.promo {
+    width: 90%;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #261532, #111d1c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.promo h1 {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.promo button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.promo button:hover {
+    background: white;
+    color: #5f2c82;
+}
+
+/* DESIGN SECTION */
+.design-section {
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.design-text {
+    flex: 1;
+}
+
+.design-text p {
+    color: gray;
+    margin: 20px 0;
+}
+
+.design-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+}
+
+/* CART DESGIN PAGE */
+.cart-container {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.total {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* SUCCESS DESIGN PAGE */
+.success-container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.checkmark {
+    font-size: 60px;
+    color: #00ff88;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    margin-top: 30px;
+}
+/*MENU NGA PART*/
+.menu{
+text-align: left; }
+/* PARA NI MOBILE FRIENDLY  */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .image {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .design-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .promo {
+        padding: 20px;
+    }
+
+    .promo h1 {
+        font-size: 24px;
+    }
+}
